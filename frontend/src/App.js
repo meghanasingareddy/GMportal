@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <main>
         <div className="App-header">
-          <h1>Sunrise Submission</h1>
+          <h1>Good Morning!</h1>
           <p>Start your day with a positive submission.</p>
         </div>
         <SubmissionForm />
