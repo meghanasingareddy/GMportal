@@ -13,9 +13,10 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'gmportal',
-  password: 'password', // Replace with your password
+  password: 'root', // Replace with your password
   port: 5432,
 });
+
 
 // Create table if it doesn't exist
 const createTable = async () => {

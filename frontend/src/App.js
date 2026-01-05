@@ -5,11 +5,13 @@ import SubmissionForm from './components/SubmissionForm';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Good Morning!</h1>
-        <p>Please fill out the form below.</p>
+      <main>
+        <div className="App-header">
+          <h1>Sunrise Submission</h1>
+          <p>Start your day with a positive submission.</p>
+        </div>
         <SubmissionForm />
-      </header>
+      </main>
     </div>
   );
 }

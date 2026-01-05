@@ -62,6 +62,7 @@ GM Portal is a full-stack web application designed to display a â€œGood Morningâ
 2.  **Install dependencies:**
     ```bash
     npm install
+    npm install react-icons
     ```
 
 3.  **Start the React application:**

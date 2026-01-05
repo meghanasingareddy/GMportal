@@ -1,3 +1,14 @@
+.form-container {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .submission-form {
   display: flex;
   flex-direction: column;
@@ -5,50 +16,100 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+  position: relative;
+  margin-bottom: 25px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #adb5bd;
+  font-size: 1.1rem;
 }
 
 .form-group input {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box; /* Important for padding and width */
-  font-size: 16px;
+  padding: 15px 15px 15px 50px; /* Make space for icon */
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #adb5bd;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #fecfef;
+  box-shadow: 0 0 0 3px rgba(254, 207, 239, 0.5);
 }
 
 button {
-  background-color: #007bff;
+  background: linear-gradient(to right, #ff9a9e 0%, #fecfef 100%);
   color: white;
   padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
 }
 
-.success-message {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  padding: 10px;
+.success-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon {
+  color: #28a745;
+  font-size: 5rem;
   margin-bottom: 20px;
-  border-radius: 5px;
-  text-align: center;
+  animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.success-animation h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.success-animation p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.new-submission-btn {
+  background: #6c757d;
+}
+
+.new-submission-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .error-message {
